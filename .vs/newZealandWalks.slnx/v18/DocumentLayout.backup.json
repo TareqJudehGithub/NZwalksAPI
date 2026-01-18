@@ -7,8 +7,20 @@
       "RelativeMoniker": "D:0:0:{49C5D3C4-95B1-E3A5-4155-AD2B30C7740D}|newZealandWalksAPI\\newZealandWalksAPI.csproj|solutionrelative:newzealandwalksapi\\controllers\\regionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{49C5D3C4-95B1-E3A5-4155-AD2B30C7740D}|newZealandWalksAPI\\newZealandWalksAPI.csproj|e:\\webdev\\newzealandwalks\\newzealandwalksapi\\controllers\\studentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{49C5D3C4-95B1-E3A5-4155-AD2B30C7740D}|newZealandWalksAPI\\newZealandWalksAPI.csproj|solutionrelative:newzealandwalksapi\\controllers\\studentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{49C5D3C4-95B1-E3A5-4155-AD2B30C7740D}|newZealandWalksAPI\\newZealandWalksAPI.csproj|e:\\webdev\\newzealandwalks\\newzealandwalksapi\\models\\dto\\updateregionrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49C5D3C4-95B1-E3A5-4155-AD2B30C7740D}|newZealandWalksAPI\\newZealandWalksAPI.csproj|solutionrelative:newzealandwalksapi\\models\\dto\\updateregionrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49C5D3C4-95B1-E3A5-4155-AD2B30C7740D}|newZealandWalksAPI\\newZealandWalksAPI.csproj|e:\\webdev\\newzealandwalks\\newzealandwalksapi\\models\\dto\\addregionrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49C5D3C4-95B1-E3A5-4155-AD2B30C7740D}|newZealandWalksAPI\\newZealandWalksAPI.csproj|solutionrelative:newzealandwalksapi\\models\\dto\\addregionrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49C5D3C4-95B1-E3A5-4155-AD2B30C7740D}|newZealandWalksAPI\\newZealandWalksAPI.csproj|e:\\webdev\\newzealandwalks\\newzealandwalksapi\\models\\dto\\regiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49C5D3C4-95B1-E3A5-4155-AD2B30C7740D}|newZealandWalksAPI\\newZealandWalksAPI.csproj|solutionrelative:newzealandwalksapi\\models\\dto\\regiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49C5D3C4-95B1-E3A5-4155-AD2B30C7740D}|newZealandWalksAPI\\newZealandWalksAPI.csproj|e:\\webdev\\newzealandwalks\\newzealandwalksapi\\models\\domain\\region.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49C5D3C4-95B1-E3A5-4155-AD2B30C7740D}|newZealandWalksAPI\\newZealandWalksAPI.csproj|solutionrelative:newzealandwalksapi\\models\\domain\\region.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -40,7 +52,7 @@
               "RelativeDocumentMoniker": "newZealandWalksAPI\\Controllers\\RegionsController.cs",
               "ToolTip": "E:\\WebDev\\newZealandWalks\\newZealandWalksAPI\\Controllers\\RegionsController.cs",
               "RelativeToolTip": "newZealandWalksAPI\\Controllers\\RegionsController.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAuwC4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAiwJAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-15T17:43:56.029Z",
               "EditorCaption": ""
@@ -48,14 +60,53 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "StudentsController.cs",
-              "DocumentMoniker": "E:\\WebDev\\newZealandWalks\\newZealandWalksAPI\\Controllers\\StudentsController.cs",
-              "RelativeDocumentMoniker": "newZealandWalksAPI\\Controllers\\StudentsController.cs",
-              "ToolTip": "E:\\WebDev\\newZealandWalks\\newZealandWalksAPI\\Controllers\\StudentsController.cs",
-              "RelativeToolTip": "newZealandWalksAPI\\Controllers\\StudentsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
+              "Title": "UpdateRegionRequestDTO.cs",
+              "DocumentMoniker": "E:\\WebDev\\newZealandWalks\\newZealandWalksAPI\\Models\\DTO\\UpdateRegionRequestDTO.cs",
+              "RelativeDocumentMoniker": "newZealandWalksAPI\\Models\\DTO\\UpdateRegionRequestDTO.cs",
+              "ToolTip": "E:\\WebDev\\newZealandWalks\\newZealandWalksAPI\\Models\\DTO\\UpdateRegionRequestDTO.cs",
+              "RelativeToolTip": "newZealandWalksAPI\\Models\\DTO\\UpdateRegionRequestDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwQAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-14T16:53:13.155Z",
+              "WhenOpened": "2026-01-18T11:32:07.306Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AddRegionRequestDTO.cs",
+              "DocumentMoniker": "E:\\WebDev\\newZealandWalks\\newZealandWalksAPI\\Models\\DTO\\AddRegionRequestDTO.cs",
+              "RelativeDocumentMoniker": "newZealandWalksAPI\\Models\\DTO\\AddRegionRequestDTO.cs",
+              "ToolTip": "E:\\WebDev\\newZealandWalks\\newZealandWalksAPI\\Models\\DTO\\AddRegionRequestDTO.cs",
+              "RelativeToolTip": "newZealandWalksAPI\\Models\\DTO\\AddRegionRequestDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwYAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-18T10:32:21.852Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RegionDTO.cs",
+              "DocumentMoniker": "E:\\WebDev\\newZealandWalks\\newZealandWalksAPI\\Models\\DTO\\RegionDTO.cs",
+              "RelativeDocumentMoniker": "newZealandWalksAPI\\Models\\DTO\\RegionDTO.cs",
+              "ToolTip": "E:\\WebDev\\newZealandWalks\\newZealandWalksAPI\\Models\\DTO\\RegionDTO.cs",
+              "RelativeToolTip": "newZealandWalksAPI\\Models\\DTO\\RegionDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-18T08:55:00.043Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Region.cs",
+              "DocumentMoniker": "E:\\WebDev\\newZealandWalks\\newZealandWalksAPI\\Models\\Domain\\Region.cs",
+              "RelativeDocumentMoniker": "newZealandWalksAPI\\Models\\Domain\\Region.cs",
+              "ToolTip": "E:\\WebDev\\newZealandWalks\\newZealandWalksAPI\\Models\\Domain\\Region.cs",
+              "RelativeToolTip": "newZealandWalksAPI\\Models\\Domain\\Region.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwoAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-18T08:55:25.477Z",
               "EditorCaption": ""
             }
           ]
