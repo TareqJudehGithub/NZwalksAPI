@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("newZealandWalksAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2582f0ff96d40d4253a82b999a533834dd523ae4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+00dbcef3a24496f1492f244c1849411929b54fea")]
 [assembly: System.Reflection.AssemblyProductAttribute("newZealandWalksAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("newZealandWalksAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
