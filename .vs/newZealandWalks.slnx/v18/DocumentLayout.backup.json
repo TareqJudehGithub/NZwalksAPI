@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "E:\\WebDev\\newZealandWalks\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{49C5D3C4-95B1-E3A5-4155-AD2B30C7740D}|newZealandWalksAPI\\newZealandWalksAPI.csproj|e:\\webdev\\newzealandwalks\\newzealandwalksapi\\controllers\\regionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{49C5D3C4-95B1-E3A5-4155-AD2B30C7740D}|newZealandWalksAPI\\newZealandWalksAPI.csproj|solutionrelative:newzealandwalksapi\\controllers\\regionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{49C5D3C4-95B1-E3A5-4155-AD2B30C7740D}|newZealandWalksAPI\\newZealandWalksAPI.csproj|e:\\webdev\\newzealandwalks\\newzealandwalksapi\\mappings\\automapperprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49C5D3C4-95B1-E3A5-4155-AD2B30C7740D}|newZealandWalksAPI\\newZealandWalksAPI.csproj|solutionrelative:newzealandwalksapi\\mappings\\automapperprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{49C5D3C4-95B1-E3A5-4155-AD2B30C7740D}|newZealandWalksAPI\\newZealandWalksAPI.csproj|e:\\webdev\\newzealandwalks\\newzealandwalksapi\\repositories\\sqlregionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{49C5D3C4-95B1-E3A5-4155-AD2B30C7740D}|newZealandWalksAPI\\newZealandWalksAPI.csproj|solutionrelative:newzealandwalksapi\\repositories\\sqlregionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{49C5D3C4-95B1-E3A5-4155-AD2B30C7740D}|newZealandWalksAPI\\newZealandWalksAPI.csproj|e:\\webdev\\newzealandwalks\\newzealandwalksapi\\controllers\\regionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49C5D3C4-95B1-E3A5-4155-AD2B30C7740D}|newZealandWalksAPI\\newZealandWalksAPI.csproj|solutionrelative:newzealandwalksapi\\controllers\\regionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{49C5D3C4-95B1-E3A5-4155-AD2B30C7740D}|newZealandWalksAPI\\newZealandWalksAPI.csproj|e:\\webdev\\newzealandwalks\\newzealandwalksapi\\repositories\\iregionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{49C5D3C4-95B1-E3A5-4155-AD2B30C7740D}|newZealandWalksAPI\\newZealandWalksAPI.csproj|solutionrelative:newzealandwalksapi\\repositories\\iregionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{49C5D3C4-95B1-E3A5-4155-AD2B30C7740D}|newZealandWalksAPI\\newZealandWalksAPI.csproj|e:\\webdev\\newzealandwalks\\newzealandwalksapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{49C5D3C4-95B1-E3A5-4155-AD2B30C7740D}|newZealandWalksAPI\\newZealandWalksAPI.csproj|solutionrelative:newzealandwalksapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{49C5D3C4-95B1-E3A5-4155-AD2B30C7740D}|newZealandWalksAPI\\newZealandWalksAPI.csproj|e:\\webdev\\newzealandwalks\\newzealandwalksapi\\repositories\\sqlregionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49C5D3C4-95B1-E3A5-4155-AD2B30C7740D}|newZealandWalksAPI\\newZealandWalksAPI.csproj|solutionrelative:newzealandwalksapi\\repositories\\sqlregionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,32 +42,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "E:\\WebDev\\newZealandWalks\\newZealandWalksAPI\\Program.cs",
-              "RelativeDocumentMoniker": "newZealandWalksAPI\\Program.cs",
-              "ToolTip": "E:\\WebDev\\newZealandWalks\\newZealandWalksAPI\\Program.cs",
-              "RelativeToolTip": "newZealandWalksAPI\\Program.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "AutoMapperProfiles.cs",
+              "DocumentMoniker": "E:\\WebDev\\newZealandWalks\\newZealandWalksAPI\\Mappings\\AutoMapperProfiles.cs",
+              "RelativeDocumentMoniker": "newZealandWalksAPI\\Mappings\\AutoMapperProfiles.cs",
+              "ToolTip": "E:\\WebDev\\newZealandWalks\\newZealandWalksAPI\\Mappings\\AutoMapperProfiles.cs",
+              "RelativeToolTip": "newZealandWalksAPI\\Mappings\\AutoMapperProfiles.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-18T16:19:27.539Z"
+              "WhenOpened": "2026-01-19T16:48:48.091Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "RegionsController.cs",
               "DocumentMoniker": "E:\\WebDev\\newZealandWalks\\newZealandWalksAPI\\Controllers\\RegionsController.cs",
               "RelativeDocumentMoniker": "newZealandWalksAPI\\Controllers\\RegionsController.cs",
               "ToolTip": "E:\\WebDev\\newZealandWalks\\newZealandWalksAPI\\Controllers\\RegionsController.cs",
               "RelativeToolTip": "newZealandWalksAPI\\Controllers\\RegionsController.cs",
-              "ViewState": "AgIAAH4AAAAAAAAAAAAiwJkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAJcAAAAAAAAAAAAwwKcAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-18T16:15:48.778Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "SQLRegionRepository.cs",
               "DocumentMoniker": "E:\\WebDev\\newZealandWalks\\newZealandWalksAPI\\Repositories\\SQLRegionRepository.cs",
               "RelativeDocumentMoniker": "newZealandWalksAPI\\Repositories\\SQLRegionRepository.cs",
