@@ -8,7 +8,6 @@ namespace newZealandWalksAPI.Repositories
     public class SQLRegionRepository : IRegionRepository
     {
         #region Fields
-
         private readonly NZWalksDbContext _nZWalksDbContext;
         #endregion
 
