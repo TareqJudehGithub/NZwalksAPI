@@ -69,8 +69,8 @@ namespace newZealandWalksAPI.Repositories
                 return null;
             }
             _nZWalksDbContext.Regions.Remove(existingRegionModel);
-
             await _nZWalksDbContext.SaveChangesAsync();
+
             return existingRegionModel;
         }
 

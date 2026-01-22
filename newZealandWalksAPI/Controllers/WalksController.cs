@@ -25,6 +25,26 @@ namespace newZealandWalksAPI.Controllers
         #endregion
 
         #region Fields
+        [HttpGet]
+        public async Task<IActionResult> GetAllWalks()
+        {
+            var walksModel = await _walkRepository.GetAllWalksAsync();
+
+            // Map to DTO
+            var walksDTO = _mapper.Map<List<WalkDTO>>(source: walksModel);
+
+            return Ok(walksModel);
+        }
+        [HttpGet]
+        [Route("{id:guid}")]
+        public async Task<IActionResult> GetWalkById([FromRoute] Guid id)
+        {
+            var walkModel = await _walkRepository.GetWalkByIdAsync(id);
+
+            var walkDTO = _mapper.Map<WalkDTO>(source: walkModel);
+
+            return Ok(walkModel);
+        }
         // Create Walk
         // Post: /api/walks
         [HttpPost]
@@ -48,6 +68,37 @@ namespace newZealandWalksAPI.Controllers
             //actionName: nameof(GetRegionById),
             //routeValues: new { id = regionDTO.Id },
             //value: regionDTO);
+        }
+
+        [HttpPut]
+        [Route("{id:guid}")]
+        public async Task<IActionResult> UpdateWalk([FromRoute] Guid id, [FromBody] UpdateWalkRequestDTO updateWalkRequestDTO)
+        {
+            // Map back to domain model and invoke the update repository method
+            var walkModel = _mapper.Map<Walk>(source: updateWalkRequestDTO);
+            walkModel = await _walkRepository.UpdateWalkAsync(id, walkModel);
+
+            if (walkModel == null)
+            {
+                return NotFound();
+            }
+            // Map to DTO
+            var walkDTO = _mapper.Map<WalkDTO>(source: walkModel);
+
+            return Ok(walkDTO);
+        }
+        [HttpDelete]
+        [Route("{id:guid}")]
+        public async Task<IActionResult> DeleteWalk([FromRoute] Guid id)
+        {
+            var existingWalk = await _walkRepository.DeleteWalk(id);
+
+            if (existingWalk == null)
+            {
+                return NotFound();
+            }
+
+            return Ok();
         }
         #endregion
     }
