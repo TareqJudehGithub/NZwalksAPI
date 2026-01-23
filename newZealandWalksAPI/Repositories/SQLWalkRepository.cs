@@ -19,8 +19,25 @@ namespace newZealandWalksAPI.Repositories
         #region Methods
         public async Task<List<Walk>> GetAllWalksAsync()
         {
-            var walksModel = await _nZWalksDbContext.Walks.ToListAsync();
+            var walksModel = await _nZWalksDbContext.Walks
+                .Include("Difficulty")
+                .Include("Region")
+                .ToListAsync();
             return walksModel;
+        }
+        public async Task<Walk?> GetWalkByIdAsync(Guid id)
+        {
+            // Get walk by id
+            var walkModel = await _nZWalksDbContext.Walks
+                .Include("Difficulty")
+                .Include("Region")
+                .FirstOrDefaultAsync(q => q.Id == id);
+
+            if (walkModel != null)
+            {
+                return walkModel;
+            }
+            return null;
         }
         public async Task<Walk> CreateWalkAsync(Walk walk)
         {
@@ -28,17 +45,6 @@ namespace newZealandWalksAPI.Repositories
             await _nZWalksDbContext.SaveChangesAsync();
 
             return walk;
-        }
-        public async Task<Walk?> GetWalkByIdAsync(Guid id)
-        {
-            // Get walk by id
-            var walkModel = await _nZWalksDbContext.Walks.FirstOrDefaultAsync(q => q.Id == id);
-
-            if (walkModel != null)
-            {
-                return walkModel;
-            }
-            return null;
         }
         public async Task<Walk?> UpdateWalkAsync(Guid id, Walk walk)
         {
@@ -75,7 +81,6 @@ namespace newZealandWalksAPI.Repositories
 
             return walkModel;
         }
-
         #endregion
     }
 }

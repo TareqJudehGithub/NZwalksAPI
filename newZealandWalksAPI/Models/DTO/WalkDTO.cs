@@ -6,12 +6,13 @@
         public string Description { get; set; }
         public double LengthInKm { get; set; }
         public string? WalkImageUrl { get; set; }
-        public Guid DifficultyId { get; set; }
-        public Guid RegionId { get; set; }
 
-        // We will get back later for the navigation
+        // We already have both Region an Difficulty ids in the navigation properties below
+        //public Guid DifficultyId { get; set; }
+        //public Guid RegionId { get; set; }
+
         // Navigation property  One to One relations
-        //public Difficulty Difficulty { get; set; }
-        //public Region Region { get; set; }
+        public RegionDTO Region { get; set; }
+        public DifficultyDTO Difficulty { get; set; }
     }
 }

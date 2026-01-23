@@ -24,7 +24,10 @@ namespace newZealandWalksAPI.Controllers
         }
         #endregion
 
-        #region Fields
+        #region Endpoints
+
+        // Get all walks
+        // Post: /api/walks
         [HttpGet]
         public async Task<IActionResult> GetAllWalks()
         {
