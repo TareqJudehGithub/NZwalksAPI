@@ -5,6 +5,7 @@ using newZealandWalksAPI.Models.DTO;
 using newZealandWalksAPI.Models.Domain;
 using newZealandWalksAPI.Repositories;
 using AutoMapper;
+using newZealandWalksAPI.CustomActionFilters;
 
 namespace newZealandWalksAPI.Controllers
 {
@@ -63,6 +64,7 @@ namespace newZealandWalksAPI.Controllers
 
         // Add new region
         [HttpPost]
+        [ValidateModel]
         public async Task<IActionResult> Create(
             [FromBody] AddRegionRequestDTO addRegionRequestDTO
             )
@@ -85,8 +87,10 @@ namespace newZealandWalksAPI.Controllers
         // Update an existing region
         [HttpPut]
         [Route("{id:guid}")]
+        [ValidateModel]
         public async Task<IActionResult> Update([FromRoute] Guid id, [FromBody] UpdateRegionRequestDTO updateRegionRequestDTO)
         {
+
             // Map back to domain model
             var regionModel = _mapper.Map<Region>(updateRegionRequestDTO);
             regionModel = await _regionRepository.UpdateRegionAsync(id, regionModel);
@@ -114,6 +118,19 @@ namespace newZealandWalksAPI.Controllers
     }
     #endregion
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

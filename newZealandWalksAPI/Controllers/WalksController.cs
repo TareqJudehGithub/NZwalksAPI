@@ -4,6 +4,7 @@ using newZealandWalksAPI.Repositories;
 using newZealandWalksAPI.Models.Domain;
 using newZealandWalksAPI.Models.DTO;
 using AutoMapper;
+using newZealandWalksAPI.CustomActionFilters;
 
 namespace newZealandWalksAPI.Controllers
 {
@@ -49,8 +50,9 @@ namespace newZealandWalksAPI.Controllers
             return Ok(walkModel);
         }
         // Create Walk
-        // Post: /api/walks
+        // Post: /api/walks/{id}
         [HttpPost]
+        [ValidateModel]
         public async Task<IActionResult> Create([FromBody] AddWalkRequestDTO addWalkRequestDTO)
         {
             // Map to Model
@@ -62,19 +64,22 @@ namespace newZealandWalksAPI.Controllers
             // Map back to DTO
             var walkDTO = _mapper.Map<WalkDTO>(source: walkModel);
 
-            return Ok(walkDTO);
 
             // Confirm creating record by returning a 201 response
-            //  return CreatedAtAction(actionName: Create, value: )
+            return CreatedAtAction(
+                actionName: nameof(GetWalkById),
+                routeValues: new { id = walkDTO.Id },
+                value: walkDTO);
 
-            //  return CreatedAtAction(
-            //actionName: nameof(GetRegionById),
-            //routeValues: new { id = regionDTO.Id },
-            //value: regionDTO);
+            // Or just return 200 response
+            // return Ok(walkDTO);          
         }
 
+        // Update Walk
+        //Put: /api/Walks/{id}
         [HttpPut]
         [Route("{id:guid}")]
+        [ValidateModel]
         public async Task<IActionResult> UpdateWalk([FromRoute] Guid id, [FromBody] UpdateWalkRequestDTO updateWalkRequestDTO)
         {
             // Map back to domain model and invoke the update repository method
@@ -90,6 +95,9 @@ namespace newZealandWalksAPI.Controllers
 
             return Ok(walkDTO);
         }
+
+        // Delete a walk
+        // /api/walks/{id}
         [HttpDelete]
         [Route("{id:guid}")]
         public async Task<IActionResult> DeleteWalk([FromRoute] Guid id)
