@@ -66,8 +66,7 @@
               "RelativeToolTip": "newZealandWalksAPI\\CustomActionFilters\\ValidateModelAttribute.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-25T15:09:14.284Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-25T15:09:14.284Z"
             },
             {
               "$type": "Document",
@@ -77,7 +76,7 @@
               "RelativeDocumentMoniker": "newZealandWalksAPI\\Models\\DTO\\UpdateWalkRequestDTO.cs",
               "ToolTip": "E:\\WebDev\\newZealandWalks\\newZealandWalksAPI\\Models\\DTO\\UpdateWalkRequestDTO.cs",
               "RelativeToolTip": "newZealandWalksAPI\\Models\\DTO\\UpdateWalkRequestDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABvAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-25T12:32:38.185Z",
               "EditorCaption": ""
@@ -92,8 +91,7 @@
               "RelativeToolTip": "newZealandWalksAPI\\Models\\DTO\\AddWalkRequestDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-25T12:16:40.662Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-25T12:16:40.662Z"
             },
             {
               "$type": "Document",
@@ -105,8 +103,7 @@
               "RelativeToolTip": "newZealandWalksAPI\\Controllers\\RegionsController.cs",
               "ViewState": "AgIAAFIAAAAAAAAAAAAAAGkAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-25T11:53:15.15Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-25T11:53:15.15Z"
             },
             {
               "$type": "Document",
@@ -118,8 +115,7 @@
               "RelativeToolTip": "newZealandWalksAPI\\Controllers\\WalksController.cs",
               "ViewState": "AgIAAEYAAAAAAAAAAAAAAFoAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-25T12:28:59.841Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-25T12:28:59.841Z"
             },
             {
               "$type": "Document",
@@ -131,8 +127,7 @@
               "RelativeToolTip": "newZealandWalksAPI\\Models\\Domain\\Walk.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvxAAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-25T12:37:13.87Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-25T12:37:13.87Z"
             },
             {
               "$type": "Document",
@@ -144,8 +139,7 @@
               "RelativeToolTip": "newZealandWalksAPI\\Models\\DTO\\UpdateRegionRequestDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvwEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-25T12:08:56.358Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-25T12:08:56.358Z"
             },
             {
               "$type": "Document",
@@ -157,8 +151,7 @@
               "RelativeToolTip": "newZealandWalksAPI\\Models\\DTO\\AddRegionRequestDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-25T11:53:38.682Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-25T11:53:38.682Z"
             }
           ]
         }
