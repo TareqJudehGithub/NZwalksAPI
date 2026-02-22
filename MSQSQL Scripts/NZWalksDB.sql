@@ -55,8 +55,7 @@ VALUES
 
 
 
-
--- DELETE 
+-- DELETE   *** Always keep this line commented!
 -- DELETE
 -- FROM Regions
 -- GO

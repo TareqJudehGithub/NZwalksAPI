@@ -14,7 +14,7 @@ namespace newZealandWalksAPI.Models.Domain
         public Guid DifficultyId { get; set; }
         public Guid RegionId { get; set; }
 
-        // Navigation property  One to One relations
+        // Navigation property One to One relations
         public Difficulty Difficulty { get; set; }
         public Region Region { get; set; }
     }

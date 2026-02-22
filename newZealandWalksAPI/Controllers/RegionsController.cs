@@ -1,10 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using AutoMapper;
 
-using newZealandWalksAPI.Data;
 using newZealandWalksAPI.Models.DTO;
 using newZealandWalksAPI.Models.Domain;
 using newZealandWalksAPI.Repositories;
-using AutoMapper;
 using newZealandWalksAPI.CustomActionFilters;
 
 namespace newZealandWalksAPI.Controllers
@@ -14,19 +13,16 @@ namespace newZealandWalksAPI.Controllers
     public class RegionsController : ControllerBase
     #region Fields
     {
-        private readonly NZWalksDbContext _nZWalksDbContext;
         private readonly IRegionRepository _regionRepository;
         private readonly IMapper _mapper;
         #endregion
 
         #region Constructors
         public RegionsController(
-            NZWalksDbContext nZWalksDbContext,
             IRegionRepository regionRepository,
             IMapper mapper
             )
         {
-            _nZWalksDbContext = nZWalksDbContext;
             _regionRepository = regionRepository;
             _mapper = mapper;
         }
@@ -92,7 +88,7 @@ namespace newZealandWalksAPI.Controllers
         {
 
             // Map back to domain model
-            var regionModel = _mapper.Map<Region>(updateRegionRequestDTO);
+            var regionModel = _mapper.Map<Region>(source: updateRegionRequestDTO);
             regionModel = await _regionRepository.UpdateRegionAsync(id, regionModel);
 
             // Check if region does exist

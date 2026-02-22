@@ -17,7 +17,7 @@ namespace newZealandWalksAPI.Data
         public DbSet<Difficulty> Difficulties { get; set; }
         #endregion
 
-        // Overriding OnModelCreating method, in order to seed initial data
+        // Seeding data - overriding OnModelCreating method, in order to seed initial data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -45,6 +45,7 @@ namespace newZealandWalksAPI.Data
 
             // Seed difficulties list to the database table/entity Difficulty
             modelBuilder.Entity<Difficulty>().HasData(difficulties);
+
 
             // Seeding data for Regions
             var regions = new List<Region>()
@@ -95,15 +96,6 @@ namespace newZealandWalksAPI.Data
 
             // Insertion into DB
             modelBuilder.Entity<Region>().HasData(regions);
-
         }
-
-
     }
 }
-
-/* 
- * "code": "AUK",
-  "name": "Auckland",
-  "regionImageUrl": "https://i.pinimg.com/1200x/d0/fc/f3/d0fcf30de9d249ab8d02391fcc678cd2.jpg"
- */

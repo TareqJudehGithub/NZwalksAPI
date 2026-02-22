@@ -27,12 +27,12 @@ namespace newZealandWalksAPI.Controllers
 
         #region Endpoints
 
-        // Get all walks
-        // Post: /api/walks
+        // GET all walks
+        // GET: /api/walks?filterOn=Name&filterQuery=Track    
         [HttpGet]
-        public async Task<IActionResult> GetAllWalks()
+        public async Task<IActionResult> GetAllWalks([FromQuery] string? filterOn, [FromQuery] string? filterQuery)
         {
-            var walksModel = await _walkRepository.GetAllWalksAsync();
+            var walksModel = await _walkRepository.GetAllWalksAsync(filterOn, filterQuery);
 
             // Map to DTO
             var walksDTO = _mapper.Map<List<WalkDTO>>(source: walksModel);
