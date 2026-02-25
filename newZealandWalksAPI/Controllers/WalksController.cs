@@ -28,11 +28,23 @@ namespace newZealandWalksAPI.Controllers
         #region Endpoints
 
         // GET all walks
-        // GET: /api/walks?filterOn=Name&filterQuery=Track    
+        // GET: /api/walks?filterOn=Name&filterQuery=Track?sortBy=Name?isAscending=true?pageNumber=1?pageSize=10    
         [HttpGet]
-        public async Task<IActionResult> GetAllWalks([FromQuery] string? filterOn, [FromQuery] string? filterQuery)
+        public async Task<IActionResult> GetAllWalks(
+            [FromQuery] string? filterOn,
+            [FromQuery] string? filterQuery,
+            [FromQuery] string? sortBy,
+            [FromQuery] bool isAscending = true,
+            [FromQuery] int pageNumber = 1,
+            [FromQuery] int pageSize = 10
+            )
         {
-            var walksModel = await _walkRepository.GetAllWalksAsync(filterOn, filterQuery);
+            var walksModel = await _walkRepository.GetAllWalksAsync(
+                filterOn, filterQuery,
+                sortBy, isAscending,
+                pageNumber,
+                pageSize
+                );
 
             // Map to DTO
             var walksDTO = _mapper.Map<List<WalkDTO>>(source: walksModel);
@@ -49,6 +61,7 @@ namespace newZealandWalksAPI.Controllers
 
             return Ok(walkModel);
         }
+
         // Create Walk
         // Post: /api/walks/{id}
         [HttpPost]
@@ -63,7 +76,6 @@ namespace newZealandWalksAPI.Controllers
 
             // Map back to DTO
             var walkDTO = _mapper.Map<WalkDTO>(source: walkModel);
-
 
             // Confirm creating record by returning a 201 response
             return CreatedAtAction(

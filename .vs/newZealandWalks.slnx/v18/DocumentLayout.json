@@ -11,8 +11,8 @@
       "RelativeMoniker": "D:0:0:{49C5D3C4-95B1-E3A5-4155-AD2B30C7740D}|newZealandWalksAPI\\newZealandWalksAPI.csproj|solutionrelative:newzealandwalksapi\\controllers\\walkscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{49C5D3C4-95B1-E3A5-4155-AD2B30C7740D}|newZealandWalksAPI\\newZealandWalksAPI.csproj|e:\\webdev\\newzealandwalks\\newzealandwalksapi\\models\\dto\\walkdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{49C5D3C4-95B1-E3A5-4155-AD2B30C7740D}|newZealandWalksAPI\\newZealandWalksAPI.csproj|solutionrelative:newzealandwalksapi\\models\\dto\\walkdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{49C5D3C4-95B1-E3A5-4155-AD2B30C7740D}|newZealandWalksAPI\\newZealandWalksAPI.csproj|e:\\webdev\\newzealandwalks\\newzealandwalksapi\\repositories\\iwalkrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49C5D3C4-95B1-E3A5-4155-AD2B30C7740D}|newZealandWalksAPI\\newZealandWalksAPI.csproj|solutionrelative:newzealandwalksapi\\repositories\\iwalkrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -44,10 +44,22 @@
               "RelativeDocumentMoniker": "newZealandWalksAPI\\Controllers\\WalksController.cs",
               "ToolTip": "E:\\WebDev\\newZealandWalks\\newZealandWalksAPI\\Controllers\\WalksController.cs",
               "RelativeToolTip": "newZealandWalksAPI\\Controllers\\WalksController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADUAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAAAswBgAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-18T11:59:56.682Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IWalkRepository.cs",
+              "DocumentMoniker": "E:\\WebDev\\newZealandWalks\\newZealandWalksAPI\\Repositories\\IWalkRepository.cs",
+              "RelativeDocumentMoniker": "newZealandWalksAPI\\Repositories\\IWalkRepository.cs",
+              "ToolTip": "E:\\WebDev\\newZealandWalks\\newZealandWalksAPI\\Repositories\\IWalkRepository.cs",
+              "RelativeToolTip": "newZealandWalksAPI\\Repositories\\IWalkRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAwAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-25T18:27:45.18Z"
             },
             {
               "$type": "Document",
@@ -57,22 +69,9 @@
               "RelativeDocumentMoniker": "newZealandWalksAPI\\Repositories\\SQLWalkRepository.cs",
               "ToolTip": "E:\\WebDev\\newZealandWalks\\newZealandWalksAPI\\Repositories\\SQLWalkRepository.cs",
               "RelativeToolTip": "newZealandWalksAPI\\Repositories\\SQLWalkRepository.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAADwvzQAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAFkAAAAAAAAAAADwv3UAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-18T12:10:25.841Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "WalkDTO.cs",
-              "DocumentMoniker": "E:\\WebDev\\newZealandWalks\\newZealandWalksAPI\\Models\\DTO\\WalkDTO.cs",
-              "RelativeDocumentMoniker": "newZealandWalksAPI\\Models\\DTO\\WalkDTO.cs",
-              "ToolTip": "E:\\WebDev\\newZealandWalks\\newZealandWalksAPI\\Models\\DTO\\WalkDTO.cs",
-              "RelativeToolTip": "newZealandWalksAPI\\Models\\DTO\\WalkDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwcAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-22T20:07:13.407Z",
               "EditorCaption": ""
             }
           ]

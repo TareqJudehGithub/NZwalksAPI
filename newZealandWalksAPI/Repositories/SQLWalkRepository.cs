@@ -17,8 +17,16 @@ namespace newZealandWalksAPI.Repositories
         }
         #endregion
         #region Methods
-        public async Task<List<Walk>> GetAllWalksAsync(string? filterOn = null, string? filterQuery = null)
+        public async Task<List<Walk>> GetAllWalksAsync(
+            string? filterOn = null,
+            string? filterQuery = null,
+            string? sortBy = null,
+            bool isAscending = true,
+            int pageNumber = 1,
+            int pageSize = 10
+            )
         {
+            // Code before filtering ,sorting, and pagination
             //var walksModel = await _nZWalksDbContext.Walks
             //    .Include("Difficulty")
             //    .Include("Region")
@@ -58,7 +66,68 @@ namespace newZealandWalksAPI.Repositories
                 }
             }
 
-            return await walksModel.ToListAsync();
+            // Sorting
+            if (!string.IsNullOrWhiteSpace(sortBy))
+            {
+                //// Sort by Name
+                //if (sortBy.Equals("Name", StringComparison.OrdinalIgnoreCase))
+                //{
+                //    walksModel = isAscending
+                //        ?
+                //        walksModel.OrderBy(q => q.Name)
+                //        :
+                //        walksModel.OrderByDescending(q => q.Name);
+                //}
+                // Sort by Length
+                if (sortBy.Equals("Length", StringComparison.OrdinalIgnoreCase))
+                {
+                    walksModel = isAscending
+                        ?
+                        walksModel.OrderBy(q => q.LengthInKm)
+                        :
+                        walksModel.OrderByDescending(q => q.LengthInKm);
+                }
+                // Sort By Difficulty
+                else if (sortBy.Equals("Difficulty", StringComparison.OrdinalIgnoreCase))
+                {
+                    walksModel = isAscending
+                        ?
+                        walksModel.OrderBy(q => q.Difficulty.Name)
+                        :
+                        walksModel.OrderByDescending(q => q.Difficulty.Name);
+                }
+                // Sort by Region
+                else if (sortBy.Equals("Region", StringComparison.OrdinalIgnoreCase))
+                {
+                    walksModel = isAscending
+                        ?
+                        walksModel.OrderBy(q => q.Region.Name)
+                        :
+                        walksModel.OrderByDescending(q => q.Region.Name);
+                }
+            }
+            else
+            {
+                // Sort by Name
+
+                walksModel = isAscending
+                    ?
+                    walksModel.OrderBy(q => q.Name)
+                    :
+                    walksModel.OrderByDescending(q => q.Name);
+
+            }
+
+            // Pagination
+            // Skip zero results
+            var skipResults = (pageNumber - 1) * pageSize;
+
+            //return await walksModel.ToListAsync();
+            return await walksModel
+                  //  .OrderBy(q => q.Name)
+                  .Skip(skipResults)
+                  .Take(pageSize)
+                  .ToListAsync();
         }
         public async Task<Walk?> GetWalkByIdAsync(Guid id)
         {
