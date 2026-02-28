@@ -6,6 +6,7 @@ using newZealandWalksAPI.Data;
 using newZealandWalksAPI.Mappings;
 using newZealandWalksAPI.Repositories;
 using System.Text;
+using Microsoft.AspNetCore.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,10 +17,17 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// NZWalks DB Context connection
+// NZWalks DBContext connection
 builder.Services.AddDbContext<NZWalksDbContext>(options =>
 options.UseSqlServer(
-    builder.Configuration.GetConnectionString("NZWalksDBConnectionString")));
+    builder.Configuration.GetConnectionString("NZWalksDBConnectionString")
+    ));
+
+// NZWalks Auth DBContext connection
+builder.Services.AddDbContext<NZWalksAuthDbContext>(options =>
+options.UseSqlServer(
+    builder.Configuration.GetConnectionString("NZWalksAuthConnetionStrong")
+    ));
 
 // Repositories DI 
 builder.Services.AddScoped<IRegionRepository, SQLRegionRepository>();
@@ -27,6 +35,24 @@ builder.Services.AddScoped<IWalkRepository, SQLWalkRepository>();
 
 // AutoMapper
 builder.Services.AddAutoMapper(cfg => cfg.AddMaps(typeof(AutoMapperProfiles)));
+
+// Identity service
+builder.Services.AddIdentityCore<IdentityUser>()
+    .AddRoles<IdentityRole>()
+    .AddTokenProvider<DataProtectorTokenProvider<IdentityUser>>("NZWalks")
+    .AddEntityFrameworkStores<NZWalksAuthDbContext>()
+    .AddDefaultTokenProviders();
+
+// Password options for new users creation
+builder.Services.Configure<IdentityOptions>(options =>
+{
+    options.Password.RequireDigit = true;
+    options.Password.RequireLowercase = true;
+    options.Password.RequireUppercase = true;
+    options.Password.RequiredLength = 6;
+    options.Password.RequiredUniqueChars = 1;
+});
+
 
 // JWT authentication service
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
