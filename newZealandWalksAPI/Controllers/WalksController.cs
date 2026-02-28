@@ -5,11 +5,13 @@ using newZealandWalksAPI.Models.Domain;
 using newZealandWalksAPI.Models.DTO;
 using AutoMapper;
 using newZealandWalksAPI.CustomActionFilters;
+using Microsoft.AspNetCore.Authorization;
 
 namespace newZealandWalksAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+
     public class WalksController : ControllerBase
     {
         #region Fields
