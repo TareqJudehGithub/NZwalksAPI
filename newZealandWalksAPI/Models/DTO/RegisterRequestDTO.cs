@@ -10,6 +10,10 @@ namespace newZealandWalksAPI.Models.DTO
 
         [Required]
         [DataType(DataType.Password)]
+        [Length(
+            minimumLength: 6,
+            maximumLength: 12,
+            ErrorMessage = "Password should have a minimum of {1} and a maximum of {2} characters.")]
         public string Password { get; set; }
 
         [Required]

@@ -8,7 +8,7 @@ GO
 SELECT *
 FROM dbo.AspNetUsers
 GO
-
+-- user: user2@nzwalks.com
 -- pass: Pass@123
 
 DELETE 

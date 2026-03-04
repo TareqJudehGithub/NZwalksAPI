@@ -18,32 +18,36 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 // NZWalks DBContext connection
-builder.Services.AddDbContext<NZWalksDbContext>(options =>
-options.UseSqlServer(
+builder.Services
+    .AddDbContext<NZWalksDbContext>(options =>
+    options.UseSqlServer(
     builder.Configuration.GetConnectionString("NZWalksDBConnectionString")
     ));
 
 // NZWalks Auth DBContext connection
-builder.Services.AddDbContext<NZWalksAuthDbContext>(options =>
-options.UseSqlServer(
+builder.Services
+    .AddDbContext<NZWalksAuthDbContext>(options =>
+    options.UseSqlServer(
     builder.Configuration.GetConnectionString("NZWalksAuthConnetionStrong")
     ));
 
 // Repositories DI 
 builder.Services.AddScoped<IRegionRepository, SQLRegionRepository>();
 builder.Services.AddScoped<IWalkRepository, SQLWalkRepository>();
+builder.Services.AddScoped<ITokenRepository, TokenRepository>();
 
 // AutoMapper
 builder.Services.AddAutoMapper(cfg => cfg.AddMaps(typeof(AutoMapperProfiles)));
 
 // Identity service
-builder.Services.AddIdentityCore<IdentityUser>()
+builder.Services
+    .AddIdentityCore<IdentityUser>()
     .AddRoles<IdentityRole>()
     .AddTokenProvider<DataProtectorTokenProvider<IdentityUser>>("NZWalks")
     .AddEntityFrameworkStores<NZWalksAuthDbContext>()
     .AddDefaultTokenProviders();
 
-// Password options for new users creation
+// Password identity options for new users creation
 builder.Services.Configure<IdentityOptions>(options =>
 {
     options.Password.RequireDigit = true;
@@ -63,10 +67,10 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         ValidateAudience = true,
         ValidateLifetime = true,
         ValidateIssuerSigningKey = true,
-        ValidIssuer = builder.Configuration["Jwt: Issuer"],
-        ValidAudience = builder.Configuration["Jwt:Audience"],
+        ValidIssuer = builder.Configuration[key: "Jwt:Issuer"],
+        ValidAudiences = new[] { builder.Configuration[key: "Jwt:Audience"] },
         IssuerSigningKey = new SymmetricSecurityKey(
-            key: Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
+            key: Encoding.UTF8.GetBytes(builder.Configuration[key: "Jwt:Key"]))
     });
 
 var app = builder.Build();

@@ -520,7 +520,8 @@
             "format": "email"
           },
           "password": {
-            "minLength": 1,
+            "maxLength": 12,
+            "minLength": 6,
             "type": "string",
             "format": "password"
           },

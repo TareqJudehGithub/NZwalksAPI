@@ -1,8 +1,8 @@
 ﻿
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Identity;
-
+using Microsoft.AspNetCore.Mvc;
 using newZealandWalksAPI.Models.DTO;
+using newZealandWalksAPI.Repositories;
 
 namespace newZealandWalksAPI.Controllers
 {
@@ -12,15 +12,17 @@ namespace newZealandWalksAPI.Controllers
     {
         #region Fields
         private readonly UserManager<IdentityUser> _userManager;
+        private readonly ITokenRepository _tokenRepository;
         #endregion
 
         #region Constructors
         public AuthController(
-            UserManager<IdentityUser> userManager
-
+            UserManager<IdentityUser> userManager,
+            ITokenRepository tokenRepository
             )
         {
             _userManager = userManager;
+            _tokenRepository = tokenRepository;
         }
         #endregion
 
@@ -31,28 +33,38 @@ namespace newZealandWalksAPI.Controllers
         [Route("Register")]
         public async Task<IActionResult> Register([FromBody] RegisterRequestDTO registerRequestDTO)
         {
+            // Instantiate a new user object from IdentityUser
             var identityUser = new IdentityUser()
             {
                 UserName = registerRequestDTO.Username,
                 Email = registerRequestDTO.Username
             };
-            // Register the new user created
-            var identityResult = await _userManager.CreateAsync(
-                user: identityUser,
-                password: registerRequestDTO.Password
-                );
 
-            if (identityResult.Succeeded)
+            // Register the new user created
+            if (
+                   registerRequestDTO.Roles.Any(q => q.Equals("Reader", StringComparison.OrdinalIgnoreCase)) ||
+                   registerRequestDTO.Roles.Any(q => q.Equals("Writer", StringComparison.OrdinalIgnoreCase))
+                )
             {
-                // Add a role
-                if (registerRequestDTO.Roles != null && registerRequestDTO.Roles.Any())
+                var identityResult = await _userManager.CreateAsync(
+               user: identityUser,
+               password: registerRequestDTO.Password
+               );
+
+                if (identityResult.Succeeded)
                 {
+                    // Add a role
+
                     identityResult = await _userManager.AddToRolesAsync(
                         user: identityUser,
                         roles: registerRequestDTO.Roles
                         );
                     return Ok(value: "User registration was successful!");
                 }
+            }
+            else
+            {
+                return BadRequest(" Invalid Role name.");
             }
             return BadRequest(" User registration failed!");
         }
@@ -62,22 +74,39 @@ namespace newZealandWalksAPI.Controllers
         [Route("Login")]
         public async Task<IActionResult> Login([FromBody] LoginRequestDTO loginRequestDTO)
         {
-            var identityUser = await _userManager.FindByEmailAsync(loginRequestDTO.Username);
+            var identityUser = await _userManager
+                .FindByEmailAsync(loginRequestDTO.Username);
 
             if (identityUser != null)
             {
-                var checkPasswordResult = await _userManager.CheckPasswordAsync(
+                var checkPasswordResult = await _userManager
+                    .CheckPasswordAsync(
                     user: identityUser,
-                    password: loginRequestDTO.Password);
+                    password: loginRequestDTO.Password
+                    );
 
                 if (checkPasswordResult)
                 {
-                    return Ok(value: $"Welcome, {identityUser}!");
+                    // Get Roles for this user
+                    var roles = await _userManager.GetRolesAsync(user: identityUser);
+
+                    if (roles != null)
+                    {
+                        // Create JWT token
+                        var jwtToken = _tokenRepository.CreateJWTToken(
+                            user: identityUser,
+                            roles: roles.ToList()
+                            );
+                        var responseDTO = new LoginResponseDTO()
+                        {
+                            JwtToken = jwtToken
+                        };
+                        return Ok(responseDTO);
+                    }
                 }
             }
             return BadRequest("Incorrect username or password!");
         }
-
         #endregion
     }
 }
