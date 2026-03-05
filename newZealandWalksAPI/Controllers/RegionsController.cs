@@ -11,7 +11,7 @@ namespace newZealandWalksAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+
     public class RegionsController : ControllerBase
     #region Fields
     {
@@ -31,6 +31,7 @@ namespace newZealandWalksAPI.Controllers
         #endregion
         #region Endpoints
         [HttpGet]
+        [Authorize(Roles = "Reader, Writer")]
         public async Task<IActionResult> GetAllRegions()
         {
             // Get data from the database
@@ -45,6 +46,7 @@ namespace newZealandWalksAPI.Controllers
         // Get region by id
         [HttpGet]
         [Route("{id:guid}")]
+        [Authorize(Roles = "Reader, Writer")]
         public async Task<IActionResult> GetRegionById([FromRoute] Guid id)
         {
             // Get data from DB
@@ -63,6 +65,7 @@ namespace newZealandWalksAPI.Controllers
         // Add new region
         [HttpPost]
         [ValidateModel]
+        [Authorize(Roles = "Writer")]
         public async Task<IActionResult> Create(
             [FromBody] AddRegionRequestDTO addRegionRequestDTO
             )
@@ -86,6 +89,7 @@ namespace newZealandWalksAPI.Controllers
         [HttpPut]
         [Route("{id:guid}")]
         [ValidateModel]
+        [Authorize(Roles = "Writer")]
         public async Task<IActionResult> Update([FromRoute] Guid id, [FromBody] UpdateRegionRequestDTO updateRegionRequestDTO)
         {
 
@@ -107,6 +111,7 @@ namespace newZealandWalksAPI.Controllers
         // Delete a region
         [HttpDelete]
         [Route("{id:guid}")]
+        [Authorize(Roles = "Writer")]
         public async Task<IActionResult> Delete([FromRoute] Guid id)
         {
             await _regionRepository.DeleteRegionAsync(id);
