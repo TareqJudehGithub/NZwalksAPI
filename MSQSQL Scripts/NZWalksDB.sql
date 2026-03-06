@@ -13,6 +13,11 @@ SELECT *
 FROM Regions
 GO
 
+SELECT *
+FROM Images
+GO
+
+
 INSERT INTO Regions
 VALUES
   (
