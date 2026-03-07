@@ -9,6 +9,7 @@ using newZealandWalksAPI.Repositories;
 using System.Text;
 using Microsoft.AspNetCore.Identity;
 using System.Security.Cryptography.Xml;
+using Microsoft.Extensions.FileProviders;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,6 +17,10 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
+// Image upload - IHttpContextAccessor
+builder.Services.AddHttpContextAccessor();
+
 builder.Services.AddEndpointsApiExplorer();
 
 // Add authorization to Swagger
@@ -70,6 +75,7 @@ builder.Services
 builder.Services.AddScoped<IRegionRepository, SQLRegionRepository>();
 builder.Services.AddScoped<IWalkRepository, SQLWalkRepository>();
 builder.Services.AddScoped<ITokenRepository, TokenRepository>();
+builder.Services.AddScoped<IImageRepository, ImageRepository>();
 
 // AutoMapper
 builder.Services.AddAutoMapper(cfg => cfg.AddMaps(typeof(AutoMapperProfiles)));
@@ -123,6 +129,17 @@ app.UseHttpsRedirection();
 app.UseAuthentication();
 
 app.UseAuthorization();
+
+// Use static files
+app.UseStaticFiles(new StaticFileOptions
+{
+    // Map to https://localhost:7150/Images
+    FileProvider = new PhysicalFileProvider(Path
+    .Combine(Directory
+    .GetCurrentDirectory(), "Images")),
+    RequestPath = "/Images"
+}
+    );
 
 app.MapControllers();
 

@@ -13,10 +13,9 @@ namespace newZealandWalksAPI.Models.Domain
         [Required]
         public string FileName { get; set; }
 
-        public string FileDescription { get; set; }
+        public string? FileDescription { get; set; }
 
-        [Required]
-        public string FileExtention { get; set; }
+        public string FileExtension { get; set; }
 
         public long FileSizeInBytes { get; set; }
 
