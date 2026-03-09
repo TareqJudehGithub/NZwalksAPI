@@ -1,11 +1,14 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using AutoMapper;
+using Serilog;
 
 using newZealandWalksAPI.Models.DTO;
 using newZealandWalksAPI.Models.Domain;
 using newZealandWalksAPI.Repositories;
 using newZealandWalksAPI.CustomActionFilters;
 using Microsoft.AspNetCore.Authorization;
+using System.Text.Json;
+
 
 namespace newZealandWalksAPI.Controllers
 {
@@ -17,16 +20,20 @@ namespace newZealandWalksAPI.Controllers
     {
         private readonly IRegionRepository _regionRepository;
         private readonly IMapper _mapper;
+        private readonly ILogger<RegionsController> _logger;
+
         #endregion
 
         #region Constructors
         public RegionsController(
             IRegionRepository regionRepository,
-            IMapper mapper
+            IMapper mapper,
+            ILogger<RegionsController> logger
             )
         {
             _regionRepository = regionRepository;
             _mapper = mapper;
+            _logger = logger;
         }
         #endregion
         #region Endpoints
@@ -34,11 +41,18 @@ namespace newZealandWalksAPI.Controllers
         [Authorize(Roles = "Reader, Writer")]
         public async Task<IActionResult> GetAllRegions()
         {
+            // Log information
+            _logger.LogInformation(message: "GetAllRegions is being invoked!");
+
             // Get data from the database
             var regionsModel = await _regionRepository.GetAllRegionsAsync();
 
+            _logger.LogInformation(message: $"Retrieving all data from the database was successful! Data returned: {JsonSerializer
+                .Serialize(value: regionsModel)} ");
+
             // Map domain models to DTOs
             var regionsDTO = _mapper.Map<List<RegionDTO>>(source: regionsModel);
+            _logger.LogInformation(message: "Converting Allregions domain model to DTO was successful!");
 
             return Ok(regionsDTO);
         }

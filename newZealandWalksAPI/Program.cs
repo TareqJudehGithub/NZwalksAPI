@@ -8,12 +8,21 @@ using newZealandWalksAPI.Mappings;
 using newZealandWalksAPI.Repositories;
 using System.Text;
 using Microsoft.AspNetCore.Identity;
-using System.Security.Cryptography.Xml;
 using Microsoft.Extensions.FileProviders;
+using Serilog;  // LoggerConfiguration
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+var logger = new LoggerConfiguration()
+    .WriteTo.Console()                                         // Where to write the log
+    .MinimumLevel.Information()                         // Logging level information
+    .CreateLogger();                                           // Create the log
+
+builder.Logging.ClearProviders();                       // Clear any provider injected
+builder.Logging.AddSerilog(logger: logger);
+
+
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
