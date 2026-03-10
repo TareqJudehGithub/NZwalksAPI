@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models; // for Swagger authentication
+using Serilog;  // LoggerConfiguration
 
 using newZealandWalksAPI.Data;
 using newZealandWalksAPI.Mappings;
@@ -9,13 +10,14 @@ using newZealandWalksAPI.Repositories;
 using System.Text;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.FileProviders;
-using Serilog;  // LoggerConfiguration
+using newZealandWalksAPI.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 var logger = new LoggerConfiguration()
-    .WriteTo.Console()                                         // Where to write the log
+    .WriteTo.Console()                                          // Where to write the log
+    .WriteTo.File(path: "Logs/NZWalks_log.txt", rollingInterval: RollingInterval.Minute)     // Write to a file  (path, rollingInterval: when to check file, )       
     .MinimumLevel.Information()                         // Logging level information
     .CreateLogger();                                           // Create the log
 
@@ -131,6 +133,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+// RequestDelegate Logger - Serilog
+app.UseMiddleware<ExceptionHandlerMiddleware>();
 
 app.UseHttpsRedirection();
 

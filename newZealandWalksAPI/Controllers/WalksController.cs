@@ -49,9 +49,11 @@ namespace newZealandWalksAPI.Controllers
                 pageSize
                 );
 
+            // Catch exception using global Exception Handler
+            // throw new Exception(message: "This is a new exception");
+
             // Map to DTO
             var walksDTO = _mapper.Map<List<WalkDTO>>(source: walksModel);
-
             return Ok(walksModel);
         }
         [HttpGet]

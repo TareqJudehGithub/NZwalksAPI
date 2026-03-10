@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using AutoMapper;
-using Serilog;
+//using Serilog;
 
 using newZealandWalksAPI.Models.DTO;
 using newZealandWalksAPI.Models.Domain;
@@ -8,7 +8,6 @@ using newZealandWalksAPI.Repositories;
 using newZealandWalksAPI.CustomActionFilters;
 using Microsoft.AspNetCore.Authorization;
 using System.Text.Json;
-
 
 namespace newZealandWalksAPI.Controllers
 {
@@ -20,41 +19,50 @@ namespace newZealandWalksAPI.Controllers
     {
         private readonly IRegionRepository _regionRepository;
         private readonly IMapper _mapper;
-        private readonly ILogger<RegionsController> _logger;
-
+        //private readonly ILogger<RegionsController> _logger;
         #endregion
 
         #region Constructors
         public RegionsController(
             IRegionRepository regionRepository,
-            IMapper mapper,
-            ILogger<RegionsController> logger
+            IMapper mapper
+            //  ILogger<RegionsController> logger
             )
         {
             _regionRepository = regionRepository;
             _mapper = mapper;
-            _logger = logger;
+            // _logger = logger;
         }
         #endregion
+
         #region Endpoints
         [HttpGet]
         [Authorize(Roles = "Reader, Writer")]
         public async Task<IActionResult> GetAllRegions()
         {
             // Log information
-            _logger.LogInformation(message: "GetAllRegions is being invoked!");
+            // _logger.LogInformation(message: "GetAllRegions is being invoked!");
 
+            //     try
+            //     {
+            //        throw new Exception("This is a custom exception");
             // Get data from the database
             var regionsModel = await _regionRepository.GetAllRegionsAsync();
 
-            _logger.LogInformation(message: $"Retrieving all data from the database was successful! Data returned: {JsonSerializer
-                .Serialize(value: regionsModel)} ");
+            //      _logger.LogInformation(message: $"Retrieving all data from the database was successful! Data returned: {JsonSerializer
+            //         .Serialize(value: regionsModel)} ");
 
             // Map domain models to DTOs
             var regionsDTO = _mapper.Map<List<RegionDTO>>(source: regionsModel);
-            _logger.LogInformation(message: "Converting Allregions domain model to DTO was successful!");
-
+            //      _logger.LogInformation(message: "Converting Allregions domain model to DTO was successful!");
             return Ok(regionsDTO);
+            //    }
+            //   catch (Exception ex)
+            //  {
+            //        _logger.LogError(ex, ex.Message);
+            //       throw;
+            //  }
+
         }
 
         // Get region by id
