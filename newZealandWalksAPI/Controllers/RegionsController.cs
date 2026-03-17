@@ -33,7 +33,8 @@ namespace newZealandWalksAPI.Controllers
 
         #region Endpoints
         [HttpGet]
-        [Authorize(Roles = "Reader, Writer")]
+        // Auth id temp disabled for testing
+        //  [Authorize(Roles = "Reader, Writer")]
         public async Task<IActionResult> GetAllRegions()
         {
             var regionsModel = await _regionRepository.GetAllRegionsAsync();
