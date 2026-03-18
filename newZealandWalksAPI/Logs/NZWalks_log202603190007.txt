@@ -1,0 +1,22 @@
+2026-03-19 00:07:08.230 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7150/api/regions - application/json; charset=utf-8 91
+2026-03-19 00:07:08.249 +03:00 [INF] Executing endpoint 'newZealandWalksAPI.Controllers.RegionsController.Create (newZealandWalksAPI)'
+2026-03-19 00:07:08.263 +03:00 [INF] Route matched with {action = "Create", controller = "Regions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(newZealandWalksAPI.Models.DTO.AddRegionRequestDTO) on controller newZealandWalksAPI.Controllers.RegionsController (newZealandWalksAPI).
+2026-03-19 00:07:08.498 +03:00 [INF] Executed DbCommand (35ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [dbo].[Regions] ([Id], [Code], [Name], [RegionImageUrl])
+VALUES (@p0, @p1, @p2, @p3);
+2026-03-19 00:07:08.518 +03:00 [INF] Executing CreatedAtActionResult, writing value of type 'newZealandWalksAPI.Models.DTO.RegionDTO'.
+2026-03-19 00:07:08.540 +03:00 [INF] Executed action newZealandWalksAPI.Controllers.RegionsController.Create (newZealandWalksAPI) in 272.8674ms
+2026-03-19 00:07:08.543 +03:00 [INF] Executed endpoint 'newZealandWalksAPI.Controllers.RegionsController.Create (newZealandWalksAPI)'
+2026-03-19 00:07:08.546 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7150/api/regions - 201 null application/json; charset=utf-8 318.5804ms
+2026-03-19 00:07:08.566 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7150/api/regions - null null
+2026-03-19 00:07:08.576 +03:00 [INF] Executing endpoint 'newZealandWalksAPI.Controllers.RegionsController.GetAllRegions (newZealandWalksAPI)'
+2026-03-19 00:07:08.580 +03:00 [INF] Route matched with {action = "GetAllRegions", controller = "Regions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllRegions() on controller newZealandWalksAPI.Controllers.RegionsController (newZealandWalksAPI).
+2026-03-19 00:07:08.654 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[Code], [r].[Name], [r].[RegionImageUrl]
+FROM [dbo].[Regions] AS [r]
+2026-03-19 00:07:08.661 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[newZealandWalksAPI.Models.DTO.RegionDTO, newZealandWalksAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-19 00:07:08.665 +03:00 [INF] Executed action newZealandWalksAPI.Controllers.RegionsController.GetAllRegions (newZealandWalksAPI) in 80.7815ms
+2026-03-19 00:07:08.668 +03:00 [INF] Executed endpoint 'newZealandWalksAPI.Controllers.RegionsController.GetAllRegions (newZealandWalksAPI)'
+2026-03-19 00:07:08.673 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7150/api/regions - 200 null application/json; charset=utf-8 106.4315ms

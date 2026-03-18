@@ -30,6 +30,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/WebDev/newZealandWalks/NZWalksUI/Views/Regions/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaW9uc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/WebDev/newZealandWalks/NZWalksUI/Views/Regions/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaW9uc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

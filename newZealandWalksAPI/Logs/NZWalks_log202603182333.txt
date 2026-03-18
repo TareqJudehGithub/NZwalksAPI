@@ -1,0 +1,26 @@
+2026-03-18 23:33:01.692 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7150/api/Auth/Login - application/json 67
+2026-03-18 23:33:01.712 +03:00 [INF] Executing endpoint 'newZealandWalksAPI.Controllers.AuthController.Login (newZealandWalksAPI)'
+2026-03-18 23:33:01.723 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(newZealandWalksAPI.Models.DTO.LoginRequestDTO) on controller newZealandWalksAPI.Controllers.AuthController (newZealandWalksAPI).
+2026-03-18 23:33:02.141 +03:00 [INF] Executed DbCommand (28ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-03-18 23:33:02.337 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2026-03-18 23:33:02.371 +03:00 [INF] Executing OkObjectResult, writing value of type 'newZealandWalksAPI.Models.DTO.LoginResponseDTO'.
+2026-03-18 23:33:02.375 +03:00 [INF] Executed action newZealandWalksAPI.Controllers.AuthController.Login (newZealandWalksAPI) in 647.3331ms
+2026-03-18 23:33:02.378 +03:00 [INF] Executed endpoint 'newZealandWalksAPI.Controllers.AuthController.Login (newZealandWalksAPI)'
+2026-03-18 23:33:02.381 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7150/api/Auth/Login - 200 null application/json; charset=utf-8 688.9217ms
+2026-03-18 23:33:38.417 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7150/api/Regions - null null
+2026-03-18 23:33:38.474 +03:00 [INF] Executing endpoint 'newZealandWalksAPI.Controllers.RegionsController.GetAllRegions (newZealandWalksAPI)'
+2026-03-18 23:33:38.476 +03:00 [INF] Route matched with {action = "GetAllRegions", controller = "Regions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllRegions() on controller newZealandWalksAPI.Controllers.RegionsController (newZealandWalksAPI).
+2026-03-18 23:33:38.548 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[Code], [r].[Name], [r].[RegionImageUrl]
+FROM [dbo].[Regions] AS [r]
+2026-03-18 23:33:38.554 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[newZealandWalksAPI.Models.DTO.RegionDTO, newZealandWalksAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-18 23:33:38.557 +03:00 [INF] Executed action newZealandWalksAPI.Controllers.RegionsController.GetAllRegions (newZealandWalksAPI) in 77.3135ms
+2026-03-18 23:33:38.561 +03:00 [INF] Executed endpoint 'newZealandWalksAPI.Controllers.RegionsController.GetAllRegions (newZealandWalksAPI)'
+2026-03-18 23:33:38.563 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7150/api/Regions - 200 null application/json; charset=utf-8 146.6335ms

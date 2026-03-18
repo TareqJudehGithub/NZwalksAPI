@@ -1,0 +1,18 @@
+2026-03-18 23:28:09.473 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7150/api/regions - application/json; charset=utf-8 68
+2026-03-18 23:28:09.482 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Writer)
+2026-03-18 23:28:09.484 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-03-18 23:28:09.486 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7150/api/regions - 401 0 null 13.6681ms
+2026-03-18 23:28:42.845 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7150/swagger/index.html - null null
+2026-03-18 23:28:42.869 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7150/swagger/index.html - 200 null text/html;charset=utf-8 24.3944ms
+2026-03-18 23:28:43.187 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7150/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-18 23:28:43.190 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7150/_vs/browserLink - null null
+2026-03-18 23:28:43.196 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7150/_framework/aspnetcore-browser-refresh.js - 200 14941 application/javascript; charset=utf-8 9.242ms
+2026-03-18 23:28:43.231 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7150/_vs/browserLink - 200 null text/javascript; charset=UTF-8 41.7988ms
+2026-03-18 23:28:43.254 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7150/api/regions - application/json; charset=utf-8 68
+2026-03-18 23:28:43.261 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Writer)
+2026-03-18 23:28:43.263 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-03-18 23:28:43.265 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7150/api/regions - 401 0 null 11.393ms
+2026-03-18 23:28:43.494 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - null null
+2026-03-18 23:28:43.531 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 37.314ms

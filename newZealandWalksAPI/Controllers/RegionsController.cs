@@ -33,7 +33,7 @@ namespace newZealandWalksAPI.Controllers
 
         #region Endpoints
         [HttpGet]
-        // Auth id temp disabled for testing
+        // Auth is temp disabled for testing
         //  [Authorize(Roles = "Reader, Writer")]
         public async Task<IActionResult> GetAllRegions()
         {
@@ -67,7 +67,8 @@ namespace newZealandWalksAPI.Controllers
         // Add new region
         [HttpPost]
         [ValidateModel]
-        [Authorize(Roles = "Writer")]
+        // Auth is temp disabled for testing
+        // [Authorize(Roles = "Writer")]
         public async Task<IActionResult> Create(
             [FromBody] AddRegionRequestDTO addRegionRequestDTO
             )
