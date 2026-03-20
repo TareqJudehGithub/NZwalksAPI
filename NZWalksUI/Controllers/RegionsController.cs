@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using NZWalksUI.Models.DTO;
+using System.Reflection;
 using System.Text;
 using System.Text.Json;
 
@@ -82,6 +83,72 @@ namespace NZWalksUI.Controllers
                 return RedirectToAction(controllerName: "Regions", actionName: nameof(Index));
             }
             return View();
+        }
+
+        // Get single region
+        [HttpGet]
+        public async Task<IActionResult> Update(Guid id)
+        {
+            var client = _httpClientFactory.CreateClient();
+            var httpResponseMessage = await client
+                .GetAsync(requestUri: $"https://localhost:7150/api/regions/{id.ToString()}");
+
+            httpResponseMessage.EnsureSuccessStatusCode();
+
+            var response = await httpResponseMessage.Content
+                .ReadFromJsonAsync<RegionDTO>();
+
+            if (response is not null)
+            {
+                return View(response);
+            }
+
+            return View(null);
+        }
+        // Update region
+        [HttpPost]
+        public async Task<IActionResult> Update(RegionDTO request)
+        {
+            var client = _httpClientFactory.CreateClient();
+            var httpRequestMessage = new HttpRequestMessage()
+            {
+                Method = HttpMethod.Put,
+                RequestUri = new Uri(uriString: $"https://localhost:7150/api/regions/{request.Id.ToString()}"),
+                Content = new StringContent(
+                    content: JsonSerializer.Serialize(request),
+                    encoding: Encoding.UTF8,
+                    mediaType: "application/json")
+            };
+
+            var httpResponseMessage = await client.SendAsync(httpRequestMessage);
+            httpResponseMessage.EnsureSuccessStatusCode();
+
+            var response = await httpResponseMessage.Content
+                .ReadFromJsonAsync<RegionDTO>();
+
+            if (response is not null)
+            {
+                return RedirectToAction(controllerName: "Regions", actionName: nameof(Index));
+            }
+            return View();
+        }
+
+
+        [HttpPost]
+        public async Task<IActionResult> Delete(RegionDTO request)
+        {
+
+            var client = _httpClientFactory.CreateClient();
+
+            var httpResponseMessage = await client.DeleteAsync(requestUri: $"https://localhost:7150/api/regions/{request.Id}");
+
+            httpResponseMessage.EnsureSuccessStatusCode();
+
+            if (httpResponseMessage.IsSuccessStatusCode)
+            {
+                return RedirectToAction(controllerName: "Regions", actionName: nameof(Index));
+            }
+            return View(nameof(Update));
         }
         #endregion
     }

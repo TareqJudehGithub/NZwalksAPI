@@ -1,0 +1,52 @@
+﻿@model RegionDTO
+
+<h1 class="mb-3">Update Region</h1>
+
+@if (Model is not null)
+{
+    <form class="mb-3" method="post">
+        @* <div class="text-danger" asp-validation-summary="ModelOnly"></div> *@
+
+        <div class="mb-3">
+            <label class="form-label">@Html.DisplayNameFor(Model =>Model.Id)</label>
+            <input class="form-control" type="text" asp-for="Id" readonly />
+            @* <span class="text-danger" asp-validation-for="Id"></span> *@
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">@Html.DisplayNameFor(Model =>Model.Code)</label>
+            <input class="form-control" type="text" asp-for="Code" />
+            @*   <span class="text-danger" asp-validation-for="Code"></span> *@
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">@Html.DisplayNameFor(model => model.Name)</label>
+            <input class="form-control" type="text" asp-for="Name">
+                @*   <span class="text-danger" asp-validation-for="Name"></span> *@
+
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">@Html.DisplayNameFor(model => model.RegionImageUrl)</label>
+                <input class="form-control" type="text" asp-for="RegionImageUrl" />
+                @*  <span class="text-danger" asp-validation-for="RegionImageUrl"></span> *@
+            </div>
+
+            <div class="mb-3  d-flex flex-row">
+                <button class="btn btn-dark" type="submit">Save</button>
+
+                <a class="btn btn-danger"
+                       asp-controller="Regions"
+                       asp-action="Index">
+                    Cancel
+                </a>
+
+                <button class="btn btn-danger"
+                        type="submit"
+                        asp-controller="Regions"
+                        asp-action="Delete">
+                    Delete
+                </button>
+            </div>
+        </form>
+    }

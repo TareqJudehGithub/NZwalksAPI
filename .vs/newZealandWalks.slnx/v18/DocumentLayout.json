@@ -7,24 +7,16 @@
       "RelativeMoniker": "D:0:0:{0ED24FE9-72F1-45A3-8CE5-EA3AD99B0AEE}|NZWalksUI\\NZWalksUI.csproj|solutionrelative:nzwalksui\\controllers\\regionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0ED24FE9-72F1-45A3-8CE5-EA3AD99B0AEE}|NZWalksUI\\NZWalksUI.csproj|e:\\webdev\\newzealandwalks\\nzwalksui\\views\\regions\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{0ED24FE9-72F1-45A3-8CE5-EA3AD99B0AEE}|NZWalksUI\\NZWalksUI.csproj|solutionrelative:nzwalksui\\views\\regions\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{49C5D3C4-95B1-E3A5-4155-AD2B30C7740D}|newZealandWalksAPI\\newZealandWalksAPI.csproj|e:\\webdev\\newzealandwalks\\newzealandwalksapi\\controllers\\regionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{49C5D3C4-95B1-E3A5-4155-AD2B30C7740D}|newZealandWalksAPI\\newZealandWalksAPI.csproj|solutionrelative:newzealandwalksapi\\controllers\\regionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0ED24FE9-72F1-45A3-8CE5-EA3AD99B0AEE}|NZWalksUI\\NZWalksUI.csproj|e:\\webdev\\newzealandwalks\\nzwalksui\\views\\regions\\update.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0ED24FE9-72F1-45A3-8CE5-EA3AD99B0AEE}|NZWalksUI\\NZWalksUI.csproj|solutionrelative:nzwalksui\\views\\regions\\update.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0ED24FE9-72F1-45A3-8CE5-EA3AD99B0AEE}|NZWalksUI\\NZWalksUI.csproj|e:\\webdev\\newzealandwalks\\nzwalksui\\views\\regions\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{0ED24FE9-72F1-45A3-8CE5-EA3AD99B0AEE}|NZWalksUI\\NZWalksUI.csproj|solutionrelative:nzwalksui\\views\\regions\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0ED24FE9-72F1-45A3-8CE5-EA3AD99B0AEE}|NZWalksUI\\NZWalksUI.csproj|e:\\webdev\\newzealandwalks\\nzwalksui\\models\\dto\\createregionrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0ED24FE9-72F1-45A3-8CE5-EA3AD99B0AEE}|NZWalksUI\\NZWalksUI.csproj|solutionrelative:nzwalksui\\models\\dto\\createregionrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0ED24FE9-72F1-45A3-8CE5-EA3AD99B0AEE}|NZWalksUI\\NZWalksUI.csproj|e:\\webdev\\newzealandwalks\\nzwalksui\\models\\dto\\regiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0ED24FE9-72F1-45A3-8CE5-EA3AD99B0AEE}|NZWalksUI\\NZWalksUI.csproj|solutionrelative:nzwalksui\\models\\dto\\regiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0ED24FE9-72F1-45A3-8CE5-EA3AD99B0AEE}|NZWalksUI\\NZWalksUI.csproj|e:\\webdev\\newzealandwalks\\nzwalksui\\views\\regions\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0ED24FE9-72F1-45A3-8CE5-EA3AD99B0AEE}|NZWalksUI\\NZWalksUI.csproj|solutionrelative:nzwalksui\\views\\regions\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,80 +42,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "E:\\WebDev\\newZealandWalks\\NZWalksUI\\Views\\Regions\\Index.cshtml",
-              "RelativeDocumentMoniker": "NZWalksUI\\Views\\Regions\\Index.cshtml",
-              "ToolTip": "E:\\WebDev\\newZealandWalks\\NZWalksUI\\Views\\Regions\\Index.cshtml",
-              "RelativeToolTip": "NZWalksUI\\Views\\Regions\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-03-18T21:15:25.822Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "RegionsController.cs",
-              "DocumentMoniker": "E:\\WebDev\\newZealandWalks\\newZealandWalksAPI\\Controllers\\RegionsController.cs",
-              "RelativeDocumentMoniker": "newZealandWalksAPI\\Controllers\\RegionsController.cs",
-              "ToolTip": "E:\\WebDev\\newZealandWalks\\newZealandWalksAPI\\Controllers\\RegionsController.cs",
-              "RelativeToolTip": "newZealandWalksAPI\\Controllers\\RegionsController.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAewEQAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T20:40:18.216Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CreateRegionRequest.cs",
-              "DocumentMoniker": "E:\\WebDev\\newZealandWalks\\NZWalksUI\\Models\\DTO\\CreateRegionRequest.cs",
-              "RelativeDocumentMoniker": "NZWalksUI\\Models\\DTO\\CreateRegionRequest.cs",
-              "ToolTip": "E:\\WebDev\\newZealandWalks\\NZWalksUI\\Models\\DTO\\CreateRegionRequest.cs",
-              "RelativeToolTip": "NZWalksUI\\Models\\DTO\\CreateRegionRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T20:36:57.194Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "E:\\WebDev\\newZealandWalks\\NZWalksUI\\Views\\Regions\\Create.cshtml",
-              "RelativeDocumentMoniker": "NZWalksUI\\Views\\Regions\\Create.cshtml",
-              "ToolTip": "E:\\WebDev\\newZealandWalks\\NZWalksUI\\Views\\Regions\\Create.cshtml",
-              "RelativeToolTip": "NZWalksUI\\Views\\Regions\\Create.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-03-18T18:29:17.116Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "RegionsController.cs",
               "DocumentMoniker": "E:\\WebDev\\newZealandWalks\\NZWalksUI\\Controllers\\RegionsController.cs",
               "RelativeDocumentMoniker": "NZWalksUI\\Controllers\\RegionsController.cs",
               "ToolTip": "E:\\WebDev\\newZealandWalks\\NZWalksUI\\Controllers\\RegionsController.cs",
               "RelativeToolTip": "NZWalksUI\\Controllers\\RegionsController.cs",
-              "ViewState": "AgIAAD4AAAAAAAAAAAAuwFgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAswFYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-18T18:03:28.853Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "RegionDTO.cs",
-              "DocumentMoniker": "E:\\WebDev\\newZealandWalks\\NZWalksUI\\Models\\DTO\\RegionDTO.cs",
-              "RelativeDocumentMoniker": "NZWalksUI\\Models\\DTO\\RegionDTO.cs",
-              "ToolTip": "E:\\WebDev\\newZealandWalks\\NZWalksUI\\Models\\DTO\\RegionDTO.cs",
-              "RelativeToolTip": "NZWalksUI\\Models\\DTO\\RegionDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwcAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T18:32:59.139Z",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\WebDev\\newZealandWalks\\NZWalksUI\\Views\\Regions\\Index.cshtml",
+              "RelativeDocumentMoniker": "NZWalksUI\\Views\\Regions\\Index.cshtml",
+              "ToolTip": "E:\\WebDev\\newZealandWalks\\NZWalksUI\\Views\\Regions\\Index.cshtml",
+              "RelativeToolTip": "NZWalksUI\\Views\\Regions\\Index.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAxwCYAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-19T15:45:08.62Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Update.cshtml",
+              "DocumentMoniker": "E:\\WebDev\\newZealandWalks\\NZWalksUI\\Views\\Regions\\Update.cshtml",
+              "RelativeDocumentMoniker": "NZWalksUI\\Views\\Regions\\Update.cshtml",
+              "ToolTip": "E:\\WebDev\\newZealandWalks\\NZWalksUI\\Views\\Regions\\Update.cshtml",
+              "RelativeToolTip": "NZWalksUI\\Views\\Regions\\Update.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-19T15:41:04.085Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "E:\\WebDev\\newZealandWalks\\NZWalksUI\\Views\\Regions\\Create.cshtml",
+              "RelativeDocumentMoniker": "NZWalksUI\\Views\\Regions\\Create.cshtml",
+              "ToolTip": "E:\\WebDev\\newZealandWalks\\NZWalksUI\\Views\\Regions\\Create.cshtml",
+              "RelativeToolTip": "NZWalksUI\\Views\\Regions\\Create.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABwAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-18T18:29:17.116Z",
               "EditorCaption": ""
             }
           ]

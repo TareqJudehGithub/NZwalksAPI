@@ -1,0 +1,25 @@
+2026-03-20 03:04:42.446 +03:00 [INF] User profile is available. Using 'C:\Users\USER10\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-20 03:04:43.044 +03:00 [INF] Now listening on: https://localhost:7150
+2026-03-20 03:04:43.053 +03:00 [INF] Now listening on: http://localhost:5255
+2026-03-20 03:04:43.266 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-20 03:04:43.269 +03:00 [INF] Hosting environment: Development
+2026-03-20 03:04:43.272 +03:00 [INF] Content root path: E:\WebDev\newZealandWalks\newZealandWalksAPI
+2026-03-20 03:04:44.577 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7150/swagger/index.html - null null
+2026-03-20 03:04:45.085 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7150/swagger/index.html - 200 null text/html;charset=utf-8 529.5901ms
+2026-03-20 03:04:45.350 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7150/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-20 03:04:45.385 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7150/_framework/aspnetcore-browser-refresh.js - 200 14941 application/javascript; charset=utf-8 35.4592ms
+2026-03-20 03:04:45.407 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7150/_vs/browserLink - null null
+2026-03-20 03:04:45.510 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7150/_vs/browserLink - 200 null text/javascript; charset=UTF-8 103.4949ms
+2026-03-20 03:04:45.757 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - null null
+2026-03-20 03:04:45.800 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 43.2828ms
+2026-03-20 03:04:47.810 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7150/api/regions - null null
+2026-03-20 03:04:47.980 +03:00 [INF] Executing endpoint 'newZealandWalksAPI.Controllers.RegionsController.GetAllRegions (newZealandWalksAPI)'
+2026-03-20 03:04:48.023 +03:00 [INF] Route matched with {action = "GetAllRegions", controller = "Regions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllRegions() on controller newZealandWalksAPI.Controllers.RegionsController (newZealandWalksAPI).
+2026-03-20 03:04:48.485 +03:00 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-03-20 03:04:50.295 +03:00 [INF] Executed DbCommand (73ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[Code], [r].[Name], [r].[RegionImageUrl]
+FROM [dbo].[Regions] AS [r]
+2026-03-20 03:04:50.419 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[newZealandWalksAPI.Models.DTO.RegionDTO, newZealandWalksAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-20 03:04:50.455 +03:00 [INF] Executed action newZealandWalksAPI.Controllers.RegionsController.GetAllRegions (newZealandWalksAPI) in 2419.0934ms
+2026-03-20 03:04:50.461 +03:00 [INF] Executed endpoint 'newZealandWalksAPI.Controllers.RegionsController.GetAllRegions (newZealandWalksAPI)'
+2026-03-20 03:04:50.481 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7150/api/regions - 200 null application/json; charset=utf-8 2673.8859ms

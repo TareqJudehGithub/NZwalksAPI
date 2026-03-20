@@ -48,7 +48,7 @@ namespace newZealandWalksAPI.Controllers
         // Get region by id
         [HttpGet]
         [Route("{id:guid}")]
-        [Authorize(Roles = "Reader, Writer")]
+        //[Authorize(Roles = "Reader, Writer")]
         public async Task<IActionResult> GetRegionById([FromRoute] Guid id)
         {
             // Get data from DB
@@ -92,7 +92,7 @@ namespace newZealandWalksAPI.Controllers
         [HttpPut]
         [Route("{id:guid}")]
         [ValidateModel]
-        [Authorize(Roles = "Writer")]
+        // [Authorize(Roles = "Writer")]
         public async Task<IActionResult> Update([FromRoute] Guid id, [FromBody] UpdateRegionRequestDTO updateRegionRequestDTO)
         {
 
@@ -114,7 +114,7 @@ namespace newZealandWalksAPI.Controllers
         // Delete a region
         [HttpDelete]
         [Route("{id:guid}")]
-        [Authorize(Roles = "Writer")]
+        // [Authorize(Roles = "Writer")]
         public async Task<IActionResult> Delete([FromRoute] Guid id)
         {
             await _regionRepository.DeleteRegionAsync(id);

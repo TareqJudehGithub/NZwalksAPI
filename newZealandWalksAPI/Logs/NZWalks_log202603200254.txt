@@ -1,0 +1,72 @@
+2026-03-20 02:54:31.020 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7150/swagger/index.html - null null
+2026-03-20 02:54:31.021 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7150/api/regions - null null
+2026-03-20 02:54:31.037 +03:00 [INF] Executing endpoint 'newZealandWalksAPI.Controllers.RegionsController.GetAllRegions (newZealandWalksAPI)'
+2026-03-20 02:54:31.058 +03:00 [INF] Route matched with {action = "GetAllRegions", controller = "Regions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllRegions() on controller newZealandWalksAPI.Controllers.RegionsController (newZealandWalksAPI).
+2026-03-20 02:54:31.052 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7150/swagger/index.html - 200 null text/html;charset=utf-8 32.8095ms
+2026-03-20 02:54:31.113 +03:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[Code], [r].[Name], [r].[RegionImageUrl]
+FROM [dbo].[Regions] AS [r]
+2026-03-20 02:54:31.123 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[newZealandWalksAPI.Models.DTO.RegionDTO, newZealandWalksAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-20 02:54:31.132 +03:00 [INF] Executed action newZealandWalksAPI.Controllers.RegionsController.GetAllRegions (newZealandWalksAPI) in 43.7759ms
+2026-03-20 02:54:31.144 +03:00 [INF] Executed endpoint 'newZealandWalksAPI.Controllers.RegionsController.GetAllRegions (newZealandWalksAPI)'
+2026-03-20 02:54:31.153 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7150/api/regions - 200 null application/json; charset=utf-8 131.1473ms
+2026-03-20 02:54:31.218 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7150/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-20 02:54:31.220 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7150/_vs/browserLink - null null
+2026-03-20 02:54:31.226 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7150/_framework/aspnetcore-browser-refresh.js - 200 14941 application/javascript; charset=utf-8 8.4572ms
+2026-03-20 02:54:31.255 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7150/_vs/browserLink - 200 null text/javascript; charset=UTF-8 35.3132ms
+2026-03-20 02:54:44.105 +03:00 [INF] User profile is available. Using 'C:\Users\USER10\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-20 02:54:44.677 +03:00 [INF] Now listening on: https://localhost:7150
+2026-03-20 02:54:44.682 +03:00 [INF] Now listening on: http://localhost:5255
+2026-03-20 02:54:44.879 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-20 02:54:44.890 +03:00 [INF] Hosting environment: Development
+2026-03-20 02:54:44.893 +03:00 [INF] Content root path: E:\WebDev\newZealandWalks\newZealandWalksAPI
+2026-03-20 02:54:45.787 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7150/swagger/index.html - null null
+2026-03-20 02:54:46.226 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7150/swagger/index.html - 200 null text/html;charset=utf-8 457.5018ms
+2026-03-20 02:54:46.451 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7150/_vs/browserLink - null null
+2026-03-20 02:54:46.451 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7150/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-20 02:54:46.484 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7150/_framework/aspnetcore-browser-refresh.js - 200 14941 application/javascript; charset=utf-8 33.0973ms
+2026-03-20 02:54:46.529 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7150/_vs/browserLink - 200 null text/javascript; charset=UTF-8 77.9801ms
+2026-03-20 02:54:46.730 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - null null
+2026-03-20 02:54:46.771 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 41.7953ms
+2026-03-20 02:54:51.183 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7150/api/regions - null null
+2026-03-20 02:54:51.297 +03:00 [INF] Executing endpoint 'newZealandWalksAPI.Controllers.RegionsController.GetAllRegions (newZealandWalksAPI)'
+2026-03-20 02:54:51.326 +03:00 [INF] Route matched with {action = "GetAllRegions", controller = "Regions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllRegions() on controller newZealandWalksAPI.Controllers.RegionsController (newZealandWalksAPI).
+2026-03-20 02:54:51.592 +03:00 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-03-20 02:54:52.847 +03:00 [INF] Executed DbCommand (35ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[Code], [r].[Name], [r].[RegionImageUrl]
+FROM [dbo].[Regions] AS [r]
+2026-03-20 02:54:52.941 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[newZealandWalksAPI.Models.DTO.RegionDTO, newZealandWalksAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-20 02:54:52.972 +03:00 [INF] Executed action newZealandWalksAPI.Controllers.RegionsController.GetAllRegions (newZealandWalksAPI) in 1636.3819ms
+2026-03-20 02:54:52.976 +03:00 [INF] Executed endpoint 'newZealandWalksAPI.Controllers.RegionsController.GetAllRegions (newZealandWalksAPI)'
+2026-03-20 02:54:52.987 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7150/api/regions - 200 null application/json; charset=utf-8 1806.6309ms
+2026-03-20 02:54:56.899 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7150/api/regions - null null
+2026-03-20 02:54:56.912 +03:00 [INF] Executing endpoint 'newZealandWalksAPI.Controllers.RegionsController.GetAllRegions (newZealandWalksAPI)'
+2026-03-20 02:54:56.916 +03:00 [INF] Route matched with {action = "GetAllRegions", controller = "Regions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllRegions() on controller newZealandWalksAPI.Controllers.RegionsController (newZealandWalksAPI).
+2026-03-20 02:54:56.963 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[Code], [r].[Name], [r].[RegionImageUrl]
+FROM [dbo].[Regions] AS [r]
+2026-03-20 02:54:56.971 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[newZealandWalksAPI.Models.DTO.RegionDTO, newZealandWalksAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-20 02:54:56.976 +03:00 [INF] Executed action newZealandWalksAPI.Controllers.RegionsController.GetAllRegions (newZealandWalksAPI) in 53.3288ms
+2026-03-20 02:54:56.982 +03:00 [INF] Executed endpoint 'newZealandWalksAPI.Controllers.RegionsController.GetAllRegions (newZealandWalksAPI)'
+2026-03-20 02:54:56.986 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7150/api/regions - 200 null application/json; charset=utf-8 86.8679ms
+2026-03-20 02:54:58.133 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7150/api/regions/a4b7373c-f222-4eba-80f7-08de852cba87 - null null
+2026-03-20 02:54:58.147 +03:00 [INF] Executing endpoint 'newZealandWalksAPI.Controllers.RegionsController.GetRegionById (newZealandWalksAPI)'
+2026-03-20 02:54:58.167 +03:00 [INF] Route matched with {action = "GetRegionById", controller = "Regions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRegionById(System.Guid) on controller newZealandWalksAPI.Controllers.RegionsController (newZealandWalksAPI).
+2026-03-20 02:54:58.454 +03:00 [INF] Executed DbCommand (41ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Code], [r].[Name], [r].[RegionImageUrl]
+FROM [dbo].[Regions] AS [r]
+WHERE [r].[Id] = @__id_0
+2026-03-20 02:54:58.465 +03:00 [INF] Executing OkObjectResult, writing value of type 'newZealandWalksAPI.Models.DTO.RegionDTO'.
+2026-03-20 02:54:58.469 +03:00 [INF] Executed action newZealandWalksAPI.Controllers.RegionsController.GetRegionById (newZealandWalksAPI) in 294.7503ms
+2026-03-20 02:54:58.478 +03:00 [INF] Executed endpoint 'newZealandWalksAPI.Controllers.RegionsController.GetRegionById (newZealandWalksAPI)'
+2026-03-20 02:54:58.482 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7150/api/regions/a4b7373c-f222-4eba-80f7-08de852cba87 - 200 null application/json; charset=utf-8 349.3654ms
+2026-03-20 02:54:59.880 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7150/api/regions - null null
+2026-03-20 02:54:59.885 +03:00 [INF] Executing endpoint 'newZealandWalksAPI.Controllers.RegionsController.GetAllRegions (newZealandWalksAPI)'
+2026-03-20 02:54:59.888 +03:00 [INF] Route matched with {action = "GetAllRegions", controller = "Regions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllRegions() on controller newZealandWalksAPI.Controllers.RegionsController (newZealandWalksAPI).
+2026-03-20 02:54:59.897 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[Code], [r].[Name], [r].[RegionImageUrl]
+FROM [dbo].[Regions] AS [r]
+2026-03-20 02:54:59.902 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[newZealandWalksAPI.Models.DTO.RegionDTO, newZealandWalksAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-20 02:54:59.906 +03:00 [INF] Executed action newZealandWalksAPI.Controllers.RegionsController.GetAllRegions (newZealandWalksAPI) in 12.9284ms
+2026-03-20 02:54:59.910 +03:00 [INF] Executed endpoint 'newZealandWalksAPI.Controllers.RegionsController.GetAllRegions (newZealandWalksAPI)'
+2026-03-20 02:54:59.913 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7150/api/regions - 200 null application/json; charset=utf-8 33.2697ms
